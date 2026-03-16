@@ -11,6 +11,17 @@ In MLOps, it's crucial to version not just your code but also your data and mode
 
 The `.dvc` files in this repository (like `data/wine_sample.csv.dvc`) are small pointers that tell DVC where to find the actual data in GCS. These pointers are committed to Git, allowing you to track data changes alongside code changes.
 
+## What is DVC (Data Version Control)?
+
+DVC is an open-source tool designed to bring version control to data and machine learning models. It works on top of Git, allowing you to manage large datasets, models, and experiments with the same best practices you use for code.
+
+### Why Use DVC in MLOps?
+
+- **Handles Large Datasets**: Git is not designed to handle large files. DVC stores data and models in a separate remote storage (like GCS, S3, or a shared server) while Git only tracks small metadata files. This keeps your Git repository small and fast.
+- **Ensures Reproducibility**: DVC tracks the exact version of the data and code used in each experiment. This makes your machine learning projects fully reproducible, allowing you to go back to any point in time and recreate your results.
+- **Facilitates Collaboration**: DVC makes it easy for teams to share and collaborate on datasets and models. Team members can push and pull data just like they do with code, ensuring everyone is working with the same versions.
+- **Experiment Tracking**: DVC helps you track experiments by linking code, data, and hyperparameters to your results. This organized approach is crucial for comparing different experiment runs and understanding what works best.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
@@ -109,3 +120,5 @@ Here’s how you and your colleagues can collaborate using this setup:
   git commit -m "Updated wine dataset"
   git push
   ```
+
+Your colleagues can now pull your changes and get the new dataset.
