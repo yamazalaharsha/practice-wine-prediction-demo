@@ -1,0 +1,4 @@
+[core]
+    remote = mlops-wine-remote
+['remote "mlops-wine-remote"']
+    url = gs://mlops-harsha-dvc
