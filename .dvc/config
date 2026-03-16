@@ -1,4 +1,4 @@
 [core]
-    remote = mlops-wine-remote
-['remote "mlops-wine-remote"']
-    url = gs://mlops-harsha-dvc
+    remote = wineremote
+['remote "wineremote"']
+    url = s3://mlops-demo-abhishek-dvc-bucket
